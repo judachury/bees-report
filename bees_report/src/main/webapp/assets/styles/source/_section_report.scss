@@ -1,0 +1,39 @@
+// Project information 
+.projectInfo {border-left:$bees-border-medium; list-style:none; padding:0;
+	strong, span {display:block; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+	> li {border:$bees-border-medium; border-left:none; display:inline-block; line-height:25px; padding:$bees-gutter-small; width:20%;
+		&:first-child {
+			strong {display:none}
+			span {color:$bees-brand-primary; font-size:16px; line-height:50px}
+		}
+	}
+}
+
+// Report layout
+.items {border-top:$bees-border-medium; margin-bottom:$bees-gutter-large;
+	dt, dd {border:$bees-border-medium; border-top:none; display:inline-block; height:33px; position:relative; vertical-align:middle;
+		> span {display:block; line-height:16px; padding:$bees-gutter-small}
+	}
+	dt {width:20%}
+	dd {border-left:none; width:80%}
+	progress {display:inline-block; vertical-align:middle; width:100%}
+	label {display:none}
+	input {border:none; height:32px; width:100%; padding:$bees-gutter-small}
+	input[type=range] {padding-left:0; padding-right:0}
+	.range {padding:0 35px 0 5px}
+	output {line-height:32px; padding:0 4px; position:absolute; right:0; top:0;}		
+
+	dt.comments, .comments label {border:none; display:block; font-weight:600; height:auto; padding:$bees-gutter-large 0 $bees-gutter-small}
+	dd.comments {border-top:$bees-border-medium; border-left:$bees-border-medium}
+	.comments, .comments textarea {clear:both; width:100%}
+	dd.comments, .comments textarea {min-height:120px; padding:$bees-gutter-small}
+	.addField {float:right; margin:$bees-gutter-small 0 0;
+		&:before {font-family:$bees-font-icons; margin-right:4px; content:$bees-icon-plus}
+	}
+}
+
+// User list
+.user {
+	dt {font-weight:600}
+	dd {border-bottom:$bees-border-light; margin-bottom:$bees-gutter-medium; padding:0 0 $bees-gutter-medium}
+}

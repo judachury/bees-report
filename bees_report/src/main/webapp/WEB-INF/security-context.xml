@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">	
+
+	<security:http auto-config="true" use-expressions="true" access-denied-page="/login" >
+		<security:intercept-url pattern="/assets/**" access="permitAll"/>
+		<security:intercept-url pattern="/login" access="permitAll"/>
+		<security:intercept-url pattern="/password" access="permitAll"/>
+		<security:intercept-url pattern="/user/**" access="hasRole('ROLE_ADMIN')"/>
+		<security:intercept-url pattern="/**" access="hasRole('ROLE_USER')"/>
+		
+		<security:form-login login-page="/login" login-processing-url="/login.do" authentication-failure-url="/login" default-target-url="/"/>
+		<security:logout invalidate-session="true" logout-success-url="/" logout-url="/logout"/>
+	</security:http>
+
+	<security:authentication-manager>
+		<security:authentication-provider user-service-ref="loginService">
+			<security:password-encoder ref="passwordEncoder"/>
+		</security:authentication-provider>
+	</security:authentication-manager>
+
+	<bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+	<bean id="loginService" class="org.beesden.report.service.LoginService"/>
+	
+</beans>

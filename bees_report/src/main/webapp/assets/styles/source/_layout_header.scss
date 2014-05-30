@@ -1,0 +1,5 @@
+.header {background:$bees-brand-dark; border-bottom:$bees-border-medium; margin:0 0 $bees-gutter-medium; 
+	&, section {height:68px; position:relative}
+
+	.logo {background:url('/assets/styles/images/styles.png') -71px -30px no-repeat; float:left; margin:11px 0; text-indent:-100%; width:141px; height:46px }	
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+
+	<!-- Basic tile templates -->
+	<definition name="ajax" templateExpression="/WEB-INF/jsp/ajax.jsp" />
+	<definition name="default" templateExpression="/WEB-INF/jsp/default.jsp" />
+	<definition name="login" template="/WEB-INF/jsp/login.jsp" />
+	
+	<!-- Project tiles -->
+	<definition name="default.projectForm" extends="default" >
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/projectForm.jsp" />
+		<put-attribute name="section" value="project" />
+	</definition>
+	<definition name="default.projectList" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/projectList.jsp" />
+		<put-attribute name="section" value="project" />
+	</definition>
+	<definition name="default.projectView" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/projectView.jsp" />
+		<put-attribute name="section" value="project" />
+	</definition>
+	
+	<!-- Report tiles -->
+	<definition name="default.reportForm" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/reportForm.jsp" />
+		<put-attribute name="section" value="report" />
+	</definition>
+	<definition name="default.reportView" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/reportView.jsp" />
+		<put-attribute name="section" value="report" />
+	</definition>
+	
+	<!--  Login tiles -->	
+	<definition name="default.login" extends="login">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/loginForm.jsp" />
+	</definition>
+	<definition name="default.password" extends="login">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/loginPassword.jsp" />
+	</definition>
+	
+	<!-- User tiles -->
+	<definition name="userForm" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/userForm.jsp" />
+		<put-attribute name="section" value="user" />
+	</definition>
+	<definition name="default.userList" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/userList.jsp" />
+		<put-attribute name="section" value="user" />
+	</definition>
+	<definition name="default.userView" extends="default">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/userView.jsp" />
+		<put-attribute name="section" value="user" />
+	</definition>
+	
+	<!--  Ajax tiles -->
+	<definition name="ajax.projectList" extends="ajax">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/projectList.jsp" />
+		<put-attribute name="section" value="project" />
+	</definition>
+	<definition name="ajax.userList" extends="ajax">
+		<put-attribute name="content" expression="/WEB-INF/jsp/templates/userList.jsp" />
+		<put-attribute name="section" value="user" />
+	</definition>
+
+</tiles-definitions>

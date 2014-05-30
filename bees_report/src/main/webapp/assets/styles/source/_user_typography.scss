@@ -1,0 +1,72 @@
+/* Generic Reset */
+* {box-sizing:border-box; -moz-box-sizing:border-box; margin:0; padding:0; }
+body {background:url('./images/wallpaper.png'); color:$bees-brand-default; font:11px/16px 'Open Sans','Tahoma','Geneva',sans-serif; }
+.jsShow {display:none}
+body.js .jsShow {display:block}
+body.js .jsHide {display:none}
+.container {clear:both}
+.container > section {margin:0 auto $bees-gutter-large; overflow:hidden; padding:0 $bees-gutter-medium; width:900px}
+
+/* Fonts */
+@font-face {
+	font-family: 'Open Sans'; src: url('/assets/client/fonts/OpenSans-Regular.eot'); src: url('/assets/fonts/OpenSans-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal }
+@font-face {
+	font-family: 'Open Sans'; src: url('/assets/client/fonts/OpenSans-Semibold.eot'); src: url('/assets/fonts/OpenSans-Semibold.ttf') format('truetype'); font-weight: 600; font-style: normal }
+@font-face {
+	font-family: 'Icons'; src: url('/assets/client/fonts/fontawesome.eot'); src: url('/assets/fonts/fontawesome.ttf') format('truetype'); font-weight: 600; font-style: normal }
+
+/* Text styles */
+h1,h2,h3,p,ul,ol {margin:0 0 $bees-gutter-medium}
+h1, h2, legend {background:$bees-brand-background; display:inline-block; color:$bees-brand-primary; margin-top:0; margin-left:-$bees-gutter-medium; padding:$bees-gutter-small $bees-gutter-medium; text-transform:uppercase;}
+h1 {font-size:18px;  line-height:24px; }
+h2 {font-size:13px; font-weight:400;  text-transform:uppercase }
+ul, ol {padding-left:20px;
+	ul, ol {margin:0}
+}
+strong {font-weight:600}
+em, address{font-style:italic}
+
+/* Links and buttons */
+a:link, a:visited, .link {color:$bees-brand-primary; text-decoration:none }
+a:hover, a:focus, .link:hover, .link:focus {color:lighten($bees-brand-primary, 15%); cursor:pointer; }
+a img {border:none; vertical-align:top}
+button.link {background:none; border:none; display:inline}
+
+.errors {border-left:4px solid $bees-brand-error; color:$bees-brand-error; font-weight:600; line-height:20px; list-style:none; padding-left:$bees-gutter-medium;}
+
+/* Form styles */
+form {
+
+	input, select, textarea {background:#fafafa; font:inherit; color:#333;}
+
+	/* Basic layout styles */
+	fieldset{background:none; border:none; padding:0; margin:0 0 $bees-gutter-medium;
+		legend {float:left;}
+		legend, .formElement {clear:both; margin-bottom:$bees-gutter-medium}
+
+		/* Label and input styles */
+		.label, .input, .error {display:inline-block; vertical-align:middle}
+		.label {color:$bees-brand-secondary; font-weight:600; width:20%}
+		.input {padding:6px; border:1px solid #ddd; border-top-color:#b5b5b5; width:80% }
+		.input[type=checkbox], .input[type=radio] {margin:0 $bees-gutter-medium 0 0; width:auto}
+		.input[type=range] {background:none; box-shadow:none}
+		.input[disabled] {background:none; border-color:transparent; font-weight:600; padding-left:0}
+		input, select {transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+			&:focus {box-shadow:0 0 5px $bees-brand-secondary; outline:none}
+		}
+	} 
+}
+
+/* Button styles */
+.button {border:1px solid; border-radius:3px; cursor:pointer; font:inherit; margin:0 0 $bees-gutter-medium; padding:9px 15px; margin-left:20%; text-transform:lowercase; width:80%}
+.button.advance {background:linear-gradient(to bottom, lighten($bees-brand-secondary, 20%), $bees-brand-secondary); border-color:$bees-brand-secondary; color:$bees-brand-light }
+.button.advance:hover, .button.advance:focus {background:$bees-brand-secondary }
+.button.advance[disabled] {background:$bees-brand-tertiary; cursor:default; opacity:0.6; transition:0.3s;}
+.button.return {background:linear-gradient(to bottom, lighten($bees-brand-soft, 20%), $bees-brand-soft); border-color:$bees-brand-soft; color:$bees-brand-default }
+.button.return:hover, .button.return:focus {background:$bees-brand-soft }
+.button.action {float:right; margin-left:$bees-gutter-small; width:auto}
+
+@media print {
+	.button, header, footer {display:none}
+	.container>section {width:100%; margin:0;}
+}

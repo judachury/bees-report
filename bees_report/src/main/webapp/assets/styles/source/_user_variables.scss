@@ -1,0 +1,40 @@
+// Site colours
+$bees-brand-primary: #37a !default;
+$bees-brand-secondary: #259 !default;
+$bees-brand-tertiary: #bbb !default;
+$bees-brand-soft: #ccc !default;
+$bees-brand-default: #555 !default;
+$bees-brand-background: #eef !default;
+$bees-brand-light: #fff !default;
+$bees-brand-dark: #333 !default;
+$bees-brand-highlight: #ddc !default;
+$bees-brand-warning: #ffe !default;
+$bees-brand-error: #c55 !default;
+$bees-brand-success: #efe !default;
+
+// Site fonts
+$bees-font-primary: 'Open Sans','Tahoma','Geneva',sans-serif !default;
+$bees-font-icons: 'Icons' !default;
+
+// Site icons
+$bees-icon-tick: '\f00c' !default;
+$bees-icon-cross: '\f00d' !default;
+$bees-icon-plus: '\f067' !default;
+$bees-icon-minus: '\f068' !default;
+$bees-icon-account: '\f007' !default;
+$bees-icon-search: '\f002' !default;
+$bees-icon-menu: '\f0c9' !default;
+$bees-icon-basket: '\f07a' !default;
+$bees-icon-arrow-left: '\f104' !default;
+$bees-icon-arrow-right: '\f0da' !default;
+
+// Site borders 
+$bees-border-faint: 1px solid #eee !default;
+$bees-border-light: 1px dashed $bees-brand-tertiary !default;
+$bees-border-medium: 1px solid $bees-brand-tertiary !default;
+$bees-border-heavy: 1px solid $bees-brand-tertiary !default;
+
+// Gutter spacing
+$bees-gutter-small: 8px !default;
+$bees-gutter-medium: 16px !default;
+$bees-gutter-large: 24px !default;

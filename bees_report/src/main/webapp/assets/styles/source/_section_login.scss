@@ -1,0 +1,10 @@
+.login {display:block; margin:140px auto 0; max-width:360px;
+	.errors {color:#ecc}
+	fieldset {background:none; border:none; padding:0; margin:0;
+		legend {background:url('./images/styles.png') 0 -76px no-repeat; display:block; float:none; padding:0; margin:0 auto 30px; overflow:hidden; white-space:nowrap; text-indent:210px; height:66px; width:210px}
+		label {color:$bees-brand-light;}
+		.link {text-align:right}
+		a {color:$bees-brand-soft;}
+		a:hover, a:focus {color:$bees-brand-light;}
+	}
+}

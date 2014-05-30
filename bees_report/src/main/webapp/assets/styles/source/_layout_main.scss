@@ -1,0 +1,29 @@
+.article {
+	> section {background: $bees-brand-light; padding-top:$bees-gutter-medium}
+}
+
+.breadcrumbs {list-style:none; padding:0;
+	li {display:inline-block;}
+	li:before {content:$bees-icon-arrow-right; font-family:$bees-font-icons; margin:0 $bees-gutter-small;}
+	a {color:$bees-brand-default}
+	a:hover, a:focus {color:$bees-brand-primary}
+	:first-child:before {display:none}
+}
+
+.paginationContainer {clear:both; overflow:hidden;}
+
+.pagination {border-left:$bees-border-medium; float:left; height:30px; list-style:none; padding:0;
+	li {border:$bees-border-medium; border-left:none; display:inline-block; overflow:hidden; line-height:28px; min-width:30px; text-align:center;}
+	a {display:block}
+	em {background:$bees-brand-background; display:block; font-style:normal}
+	span {background:$bees-brand-primary; color:$bees-brand-light; display:block; font-style:normal}
+}
+
+.sortOrder {float:right;
+	fieldset {margin:0;
+		legend, label {display:none}
+		select {width:auto;}
+	}
+}
+
+.summary {clear:left; display:block; padding:7px 0; margin:0 0 $bees-gutter-medium}

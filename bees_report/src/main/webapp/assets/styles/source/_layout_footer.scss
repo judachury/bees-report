@@ -1,0 +1,9 @@
+.footer {border-top:$bees-border-light; padding:15px 0;
+	.footer-left {float:left;}
+	.footer-left a:before {content:$bees-icon-arrow-right; font-family:$bees-font-icons; padding:0 6px 0 0; margin:3px 0 0 }
+	.footer-right{float:right; text-align:right}
+	.footer-center {padding:10px 0; text-align:center}
+	ul {list-style:none; padding:0; line-height:20px} 
+	li, a {color:$bees-brand-soft;}
+	a:hover, a:focus {color:$bees-brand-light}
+}
